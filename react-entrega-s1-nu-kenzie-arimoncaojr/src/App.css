@@ -38,21 +38,43 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  cursor: pointer;
+}
+.principal-infos button:hover {
+  background-color: #aa2354;
 }
 .container-secondary {
   display: flex;
   flex-direction: column;
   gap: 5rem;
   position: relative;
+  width: 100vw;
+  height: 100vh;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: 10px;
+  box-shadow: 0px 4px 32px -12px rgba(0, 0, 0, 0.25);
+  height: 80px;
 }
 header button {
+  width: 64px;
+  height: 40px;
   margin-right: 20rem;
+  border: 1.4px solid transparent;
+  border-radius: 8px;
+  background-color: #e9ecef;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  cursor: pointer;
+}
+header button:hover {
+  background-color: #b7bcc2;
+}
+header img {
+  margin-left: 20.5rem;
 }
 .container-form {
   display: flex;
@@ -93,6 +115,10 @@ form button {
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
+  cursor: pointer;
+}
+form button:hover {
+  background-color: #aa2354;
 }
 label {
   font-weight: 500;
@@ -123,17 +149,12 @@ select {
 }
 
 .container-loading {
-  margin-right: 20rem;
+  margin-right: 13.8rem;
   width: 100%;
   height: 25rem;
 }
 .container-loading img {
   animation: shimmer 2s infinite;
-}
-.container-total-value {
-  position: absolute;
-  bottom: 0;
-  width: 10%;
 }
 
 @keyframes shimmer {
@@ -142,12 +163,13 @@ select {
   }
 }
 .container-total-value {
+  position: fixed;
+  margin-top: 39%;
+  width: 10%;
   margin-left: 20rem;
-  margin-top: -10rem;
   border: 1px solid #e9ecef;
   border-radius: 4px;
   width: 363px;
-  position: absolute;
 }
 .container-total-value div {
   display: flex;
@@ -184,6 +206,7 @@ ul {
 li {
   list-style: none;
   border-radius: 4px;
+  margin-right: 10px;
 }
 li button {
   border-radius: 2px;
@@ -221,6 +244,27 @@ li div p {
   font-size: 12px;
   line-height: 22px;
 }
+.description-div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 1rem;
+}
+.final-div {
+  position: relative;
+}
+.final-div button {
+  right: 0;
+  margin-bottom: 20px;
+  margin-right: 10px;
+  position: absolute;
+}
+.final-div p {
+  right: 0;
+  margin-bottom: 30px;
+  margin-right: 100px;
+  position: absolute;
+}
 .Entrada {
   background-color: #03b898;
   padding-left: 4px;
@@ -231,9 +275,54 @@ li div p {
   padding-left: 4px;
   border-radius: 4px;
 }
+.container-result-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.container-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  margin-top: 5%;
+  margin-right: 19%;
+  width: 40rem;
+}
+.container-list h2 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+}
+.container-list nav {
+  display: flex;
+  gap: 20px;
+  position: fixed;
+  margin-left: 15.5rem;
+}
+.container-list nav button {
+  width: 92px;
+  height: 40px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: #e9ecef;
+  border: 1.4px solid #e9ecef;
+  border-radius: 8px;
+  cursor: pointer;
+}
+.container-list nav button:focus {
+  background-color: #fd377e;
+  border: 1.4px solid #fd377e;
+  color: white;
+}
 
 @media (max-width: 768px) {
   .container {
+    position: fixed;
+  }
+  .container-secondary {
     position: fixed;
   }
   .principal-infos h1 {
