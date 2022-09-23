@@ -10,6 +10,11 @@ function App() {
   function addInfos(newInfos) {
     return setlistTransactions([...listTransactions, newInfos]);
   }
+  function removeItem(item) {
+    return setlistTransactions(
+      listTransactions.filter((element) => element !== item)
+    );
+  }
   return (
     <>
       {dashBoard ? (
@@ -27,7 +32,11 @@ function App() {
           </div>
         </div>
       ) : (
-        <Form listTransactions={listTransactions} addInfos={addInfos} />
+        <Form
+          listTransactions={listTransactions}
+          addInfos={addInfos}
+          removeItem={removeItem}
+        />
       )}
     </>
   );

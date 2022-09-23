@@ -4,12 +4,29 @@ import logo from "../assets/logo2.png";
 import noCard from "../assets/NoCard.png";
 import { List } from "../List";
 import { TotalMoney } from "../TotalMoney";
-export const Form = ({ listTransactions, addInfos }) => {
+export const Form = ({ listTransactions, addInfos, removeItem }) => {
   const [descriptionInput, setDescriptionInput] = useState("");
   const [valorInput, setValorInput] = useState();
   const [typeSelect, setTypeSelect] = useState("");
   const [dashBoard, setDashBoard] = useState(true);
-
+  const [inputs, setInputs] = useState(false);
+  const [outputs, setOutputs] = useState(false);
+  const [all, setAll] = useState(true);
+  function clickInput() {
+    setAll(false);
+    setOutputs(false);
+    return setInputs(true);
+  }
+  function clickOutput() {
+    setAll(false);
+    setInputs(false);
+    return setOutputs(true);
+  }
+  function clickAll() {
+    setOutputs(false);
+    setInputs(false);
+    return setAll(true);
+  }
   return (
     <>
       {dashBoard ? (
@@ -68,15 +85,27 @@ export const Form = ({ listTransactions, addInfos }) => {
               <div className="container-list">
                 <h2>Resumo Financeiro</h2>
                 <nav>
-                  <button>Todos</button>
-                  <button>Entradas</button>
-                  <button>Despesas</button>
+                  <button type="button" onClick={clickAll}>
+                    Todos
+                  </button>
+                  <button type="button" onClick={clickInput}>
+                    Entradas
+                  </button>
+                  <button type="button" onClick={clickOutput}>
+                    Despesas
+                  </button>
                 </nav>
               </div>
               {listTransactions.length > 0 ? (
                 <div className="container-loading">
                   {" "}
-                  <List listTransactions={listTransactions} />{" "}
+                  <List
+                    listTransactions={listTransactions}
+                    all={all}
+                    inputs={inputs}
+                    outputs={outputs}
+                    removeItem={removeItem}
+                  />{" "}
                 </div>
               ) : (
                 <div className="container-loading">
@@ -86,7 +115,9 @@ export const Form = ({ listTransactions, addInfos }) => {
               )}
             </div>
           </div>
-          <TotalMoney listTransactions={listTransactions} />
+          {listTransactions.length > 0 && (
+            <TotalMoney listTransactions={listTransactions} />
+          )}
         </div>
       ) : (
         <App />
