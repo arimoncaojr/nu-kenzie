@@ -7,6 +7,9 @@ import { Form } from "./Form";
 function App() {
   const [listTransactions, setlistTransactions] = useState([]);
   const [dashBoard, setDashBoard] = useState(true);
+  function addInfos(newInfos) {
+    return setlistTransactions([...listTransactions, newInfos]);
+  }
   return (
     <>
       {dashBoard ? (
@@ -24,10 +27,7 @@ function App() {
           </div>
         </div>
       ) : (
-        <Form
-          listTransactions={listTransactions}
-          setlistTransactions={setlistTransactions}
-        />
+        <Form listTransactions={listTransactions} addInfos={addInfos} />
       )}
     </>
   );

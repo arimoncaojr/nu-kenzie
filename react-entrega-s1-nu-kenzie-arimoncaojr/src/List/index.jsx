@@ -1,10 +1,9 @@
 import { Card } from "../Card";
 export const List = ({ listTransactions }) => {
+  console.log(listTransactions);
   return (
     <ul>
-      {listTransactions.map((element, index) => (
-        <Card transaction={element} key={index} />
-      ))}
+      <Card listTransactions={listTransactions} />
     </ul>
   );
 };

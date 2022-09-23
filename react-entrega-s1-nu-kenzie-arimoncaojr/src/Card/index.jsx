@@ -1,13 +1,17 @@
-import trash from "../assets/trash1.png";
-export const Card = ({ transaction, key }) => {
+export const Card = ({ listTransactions }) => {
+  console.log(listTransactions);
   return (
-    <li key={key}>
-      <h2>{transaction.description}</h2>
-      <p>{transaction.type}</p>
-      <p>{transaction.value}</p>
-      <button>
-        <img src={trash} alt="lixeira" />
-      </button>
-    </li>
+    <>
+      {listTransactions.map((e, i) => (
+        <li className={e.type} key={i}>
+          <div>
+            <h2>{e.description}</h2>
+            <p>{e.type}</p>
+            <p>R$ {e.value}</p>
+            <button></button>
+          </div>
+        </li>
+      ))}
+    </>
   );
 };
