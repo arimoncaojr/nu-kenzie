@@ -198,8 +198,8 @@ li {
 .description-div {
   display: flex;
   flex-direction: column;
-  width: 10rem;
   margin-left: 1rem;
+  width: 9rem;
 }
 .description-div h2 {
   font-weight: 700;
@@ -301,6 +301,12 @@ li button {
   li {
     width: 30rem;
     margin-left: 2rem;
+  }
+  .description-div {
+    display: flex;
+    flex-direction: column;
+    margin-left: -2rem;
+    width: 22rem;
   }
   .container-list {
     display: flex;
