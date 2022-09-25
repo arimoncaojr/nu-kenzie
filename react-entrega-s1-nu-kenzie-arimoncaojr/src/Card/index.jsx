@@ -12,8 +12,10 @@ export const Card = ({
           <li className={e.type} key={i}>
             <div>
               <div className="description-div">
-                <h2>{e.description}</h2>
-                <p>{e.type}</p>
+                <h2>
+                  {e.description}
+                  <p>{e.type}</p>
+                </h2>
               </div>
               <div className="final-div">
                 <p>R$ {e.value}</p>
@@ -28,8 +30,10 @@ export const Card = ({
             e.type === "Entrada" && (
               <li className={e.type} key={i}>
                 <div className="description-div">
-                  <h2>{e.description}</h2>
-                  <p>{e.type}</p>
+                  <h2>
+                    {e.description}
+                    <p>{e.type}</p>
+                  </h2>
                 </div>
                 <div className="final-div">
                   <p>R$ {e.value}</p>
@@ -44,8 +48,10 @@ export const Card = ({
             e.type === "Saída" && (
               <li className={e.type} key={i}>
                 <div className="description-div">
-                  <h2>{e.description}</h2>
-                  <p>{e.type}</p>
+                  <h2>
+                    {e.description}
+                    <p>{e.type}</p>
+                  </h2>
                 </div>
                 <div className="final-div">
                   <p>R$ {e.value}</p>
