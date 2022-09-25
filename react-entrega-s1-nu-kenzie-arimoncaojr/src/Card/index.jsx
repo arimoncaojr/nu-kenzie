@@ -27,18 +27,13 @@ export const Card = ({
           (e, i) =>
             e.type === "Entrada" && (
               <li className={e.type} key={i}>
-                <div>
-                  <div className="description-div">
-                    <h2>{e.description}</h2>
-                    <p>{e.type}</p>
-                  </div>
-                  <div className="final-div">
-                    <p>R$ {e.value}</p>
-                    <button
-                      type="button"
-                      onClick={() => removeItem(e)}
-                    ></button>
-                  </div>
+                <div className="description-div">
+                  <h2>{e.description}</h2>
+                  <p>{e.type}</p>
+                </div>
+                <div className="final-div">
+                  <p>R$ {e.value}</p>
+                  <button type="button" onClick={() => removeItem(e)}></button>
                 </div>
               </li>
             )
@@ -48,18 +43,13 @@ export const Card = ({
           (e, i) =>
             e.type === "Saída" && (
               <li className={e.type} key={i}>
-                <div>
-                  <div className="description-div">
-                    <h2>{e.description}</h2>
-                    <p>{e.type}</p>
-                  </div>
-                  <div className="final-div">
-                    <p>R$ {e.value}</p>
-                    <button
-                      type="button"
-                      onClick={() => removeItem(e)}
-                    ></button>
-                  </div>
+                <div className="description-div">
+                  <h2>{e.description}</h2>
+                  <p>{e.type}</p>
+                </div>
+                <div className="final-div">
+                  <p>R$ {e.value}</p>
+                  <button type="button" onClick={() => removeItem(e)}></button>
                 </div>
               </li>
             )
