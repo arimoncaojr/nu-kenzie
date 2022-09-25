@@ -6,7 +6,6 @@ export const List = ({
   outputs,
   removeItem,
 }) => {
-  console.log(listTransactions);
   return (
     <ul>
       <Card
