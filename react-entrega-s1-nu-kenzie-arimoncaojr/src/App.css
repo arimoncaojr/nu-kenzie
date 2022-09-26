@@ -285,6 +285,9 @@ li button {
   .container {
     position: relative;
   }
+  header {
+    z-index: 1;
+  }
   .container-form {
     margin: 0;
   }
@@ -292,7 +295,6 @@ li button {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
-    position: relative;
   }
   .container-result-form {
     margin-top: 7rem;
