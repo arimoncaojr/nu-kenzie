@@ -72,6 +72,12 @@ header button {
 header img {
   margin-left: 1rem;
 }
+.div-header {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
 .container-form {
   margin: 0 auto;
   width: 363px;
@@ -286,8 +292,25 @@ li button {
     position: relative;
   }
   header {
+    justify-content: center;
     z-index: 1;
   }
+  .div-header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 25rem;
+    justify-content: center;
+    position: relative;
+  }
+  .div-header img {
+    position: absolute;
+    margin-right: 54rem;
+  }
+  .div-header button {
+    margin-left: 50rem;
+  }
+
   .container-form {
     margin: 0;
   }
@@ -295,6 +318,8 @@ li button {
     display: flex;
     justify-content: space-between;
     max-width: 100%;
+    gap: 1rem;
+    margin: 0 auto;
   }
   .container-result-form {
     margin-top: 7rem;
@@ -306,7 +331,7 @@ li button {
   }
   li {
     width: 30rem;
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
   .description-div {
     display: flex;
@@ -315,13 +340,18 @@ li button {
     width: 22rem;
   }
   .container-list {
+    position: relative;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 5.8rem;
     justify-content: space-between;
   }
   .container-list h2 {
     margin-left: 3rem;
+    position: absolute;
+  }
+  .container-list nav {
+    margin-left: 13.5rem;
   }
   .container-list nav button:focus {
     background-color: #fd377e;
@@ -333,11 +363,11 @@ li button {
     width: 35rem;
   }
   .container-loading h2 {
-    margin-left: 3rem;
+    margin-left: 3.5rem;
   }
   .container-loading img {
     position: absolute;
-    margin-left: 3rem;
+    margin-left: 3.5rem;
   }
   li:hover {
     background-color: #fff;
