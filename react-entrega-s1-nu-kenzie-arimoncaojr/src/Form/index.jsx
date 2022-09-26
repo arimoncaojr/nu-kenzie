@@ -7,7 +7,7 @@ import { TotalMoney } from "../TotalMoney";
 export const Form = ({ listTransactions, addInfos, removeItem }) => {
   const [descriptionInput, setDescriptionInput] = useState("");
   const [valorInput, setValorInput] = useState();
-  const [typeSelect, setTypeSelect] = useState("");
+  const [typeSelect, setTypeSelect] = useState("Entrada");
   const [dashBoard, setDashBoard] = useState(true);
   const [inputs, setInputs] = useState(false);
   const [outputs, setOutputs] = useState(false);
@@ -59,6 +59,7 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                     onChange={(event) =>
                       setDescriptionInput(event.target.value)
                     }
+                    required
                   />
                   <p>Ex: Compra de roupas</p>
                   <div className="valor">
@@ -67,7 +68,9 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                       <input
                         type="text"
                         placeholder="0"
+                        pattern="[0-9]+([,][0-9]+)?"
                         onChange={(event) => setValorInput(event.target.value)}
+                        required
                       />
                     </div>
                     <div className="type-select">
@@ -75,7 +78,6 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                       <select
                         onChange={(event) => setTypeSelect(event.target.value)}
                       >
-                        <option value="">Selecione</option>
                         <option value="Entrada">Entrada</option>
                         <option value="Saída">Saída</option>
                       </select>
