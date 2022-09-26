@@ -32,10 +32,12 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
       {dashBoard ? (
         <div className="container-secondary">
           <header className="menu">
-            <img src={logo} alt="" />
-            <button type="button" onClick={() => setDashBoard(false)}>
-              Início
-            </button>
+            <div className="div-header">
+              <img src={logo} alt="" />
+              <button type="button" onClick={() => setDashBoard(false)}>
+                Início
+              </button>
+            </div>
           </header>
           <div className="container-all">
             <div className="container-form">
