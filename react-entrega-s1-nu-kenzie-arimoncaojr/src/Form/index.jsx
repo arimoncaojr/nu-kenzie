@@ -7,7 +7,7 @@ import { TotalMoney } from "../TotalMoney";
 export const Form = ({ listTransactions, addInfos, removeItem }) => {
   const [descriptionInput, setDescriptionInput] = useState("");
   const [valorInput, setValorInput] = useState();
-  const [typeSelect, setTypeSelect] = useState("Entrada");
+  const [typeSelect, setTypeSelect] = useState("");
   const [dashBoard, setDashBoard] = useState(true);
   const [inputs, setInputs] = useState(false);
   const [outputs, setOutputs] = useState(false);
@@ -79,7 +79,9 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                       <label>Tipo de valor</label>
                       <select
                         onChange={(event) => setTypeSelect(event.target.value)}
+                        required
                       >
+                        <option value="">Selecione</option>
                         <option value="Entrada">Entrada</option>
                         <option value="Saída">Saída</option>
                       </select>
