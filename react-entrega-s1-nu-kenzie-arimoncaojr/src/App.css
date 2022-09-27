@@ -182,7 +182,8 @@ select:invalid {
 
 .container-loading img {
   width: 90%;
-  animation: shimmer 2s infinite;
+  animation: shimmer 1s infinite;
+  animation-direction: alternate;
 }
 .container-loading h2 {
   font-weight: 700;
@@ -301,6 +302,14 @@ li button {
 @media (min-width: 768px) {
   .container {
     position: relative;
+  }
+  .principal-img {
+    animation: spin 1s;
+  }
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
   }
   header {
     justify-content: center;
