@@ -375,7 +375,8 @@ li button {
     margin-left: 13.5rem;
   }
   .container-list nav button:hover {
-    background-color: #b7bcc2;
+    background-color: #fd377e;
+    color: white;
   }
   .container-list nav button:focus {
     background-color: #fd377e;
@@ -414,7 +415,8 @@ li button {
     background-color: #aa2354;
   }
   header button:hover {
-    background-color: #b7bcc2;
+    background-color: #fd377e;
+    color: white;
   }
   .principal-infos button:hover {
     background-color: #aa2354;
