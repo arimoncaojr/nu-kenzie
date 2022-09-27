@@ -262,6 +262,14 @@ li button {
 .Saída {
   border-left: 6px solid #fd377e;
 }
+.option-input {
+  color: #03b898;
+  font-weight: 600;
+}
+.option-output {
+  color: #fd377e;
+  font-weight: 600;
+}
 .container-result-form {
   display: flex;
   flex-direction: column;

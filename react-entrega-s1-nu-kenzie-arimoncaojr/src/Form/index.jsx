@@ -83,8 +83,12 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                         required
                       >
                         <option value="">Selecione</option>
-                        <option value="Entrada">Entrada</option>
-                        <option value="Saída">Saída</option>
+                        <option className="option-input" value="Entrada">
+                          Entrada
+                        </option>
+                        <option className="option-output" value="Saída">
+                          Saída
+                        </option>
                       </select>
                     </div>
                   </div>
