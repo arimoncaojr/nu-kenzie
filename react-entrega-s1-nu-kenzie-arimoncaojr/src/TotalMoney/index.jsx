@@ -9,8 +9,10 @@ export const TotalMoney = ({ listTransactions }) => {
             .reduce(
               (acc, curr) =>
                 curr.type === "Entrada"
-                  ? parseFloat(curr.value.replace(",", ".")) + parseFloat(acc)
-                  : parseFloat(acc) - parseFloat(curr.value.replace(",", ".")),
+                  ? parseFloat(curr.value.replace(".", "").replace(",", ".")) +
+                    parseFloat(acc)
+                  : parseFloat(acc) -
+                    parseFloat(curr.value.replace(".", "").replace(",", ".")),
               0
             )
             .toFixed(2)
