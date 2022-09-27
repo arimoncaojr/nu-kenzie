@@ -365,6 +365,9 @@ li button {
   .container-list nav {
     margin-left: 13.5rem;
   }
+  .container-list nav button:hover {
+    background-color: #b7bcc2;
+  }
   .container-list nav button:focus {
     background-color: #fd377e;
     border: 1.4px solid #fd377e;
@@ -380,6 +383,11 @@ li button {
   .container-loading img {
     position: absolute;
     margin-left: 3.5rem;
+  }
+  .div-header img:hover {
+    margin-top: -10px;
+    box-shadow: 0 4px 4px #999;
+    transition: all 0.2s ease-in-out;
   }
   li:hover {
     background-color: #fff;
