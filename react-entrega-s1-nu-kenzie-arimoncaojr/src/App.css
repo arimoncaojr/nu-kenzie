@@ -140,8 +140,11 @@ select {
   width: 128px;
   height: 48px;
   border: transparent;
-  background-color: #f8f9fa;
   border-radius: 8px;
+}
+input:invalid,
+select:invalid {
+  background-color: #fadfe8;
 }
 .container-total-value {
   width: 10%;
