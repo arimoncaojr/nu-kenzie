@@ -317,6 +317,7 @@ li button {
   .div-header img {
     position: absolute;
     margin-right: 54rem;
+    cursor: pointer;
   }
   .div-header button {
     margin-left: 50rem;
