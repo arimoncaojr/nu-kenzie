@@ -70,7 +70,7 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
                       <input
                         type="text"
                         placeholder="0"
-                        pattern="[0-9]+([,][0-9]+)?"
+                        pattern="[0-9]+([.\,][0-9]+)?"
                         onChange={(event) => setValorInput(event.target.value)}
                         required
                       />
