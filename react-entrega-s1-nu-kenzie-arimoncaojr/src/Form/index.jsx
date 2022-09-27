@@ -33,7 +33,7 @@ export const Form = ({ listTransactions, addInfos, removeItem }) => {
         <div className="container-secondary">
           <header className="menu">
             <div className="div-header">
-              <img src={logo} alt="" />
+              <img src={logo} alt="" onClick={() => setDashBoard(false)} />
               <button type="button" onClick={() => setDashBoard(false)}>
                 Início
               </button>
