@@ -7,13 +7,25 @@
   background-color: #212529;
   height: 100vh;
   font-family: "Nunito", sans-serif;
+  width: 100vw;
+}
+.principal-infos img {
+  max-width: 100%;
+}
+.principal-infos {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  max-width: 100%;
+}
+.principal-img img {
+  display: none;
 }
 .principal-infos h1 {
   color: #ffffff;
   font-weight: 800;
   font-size: 38px;
   line-height: 48px;
-  width: 347px;
 }
 .principal-infos p {
   color: white;
@@ -40,13 +52,16 @@
   font-size: 16px;
   line-height: 19px;
   cursor: pointer;
+  max-width: 100%;
 }
 .container-secondary {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-
+.principal-img {
+  display: unset;
+}
 header {
   position: fixed;
   display: flex;
@@ -301,10 +316,18 @@ li button {
 
 @media (min-width: 768px) {
   .container {
-    position: relative;
+    gap: 20px;
+  }
+  .principal-infos h1 {
+    width: 350px;
   }
   .principal-img {
     animation: spin 1s;
+    max-width: 100%;
+  }
+  .principal-img img {
+    display: block;
+    max-width: 100%;
   }
   @keyframes spin {
     to {
